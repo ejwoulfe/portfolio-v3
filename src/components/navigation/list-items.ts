@@ -1,5 +1,5 @@
 export const listItems = [
-  { name: "Skills", goto: "" },
-  { name: "Projects", goto: "" },
-  { name: "About", goto: "" },
+  { name: "skills", goto: "", icon: "knowledge" },
+  { name: "projects", goto: "", icon: "folders" },
+  { name: "about", goto: "", icon: "person" },
 ];
