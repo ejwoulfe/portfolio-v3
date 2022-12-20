@@ -1,0 +1,13 @@
+.expanded-container {
+  position: relative;
+
+  ul {
+    position: absolute;
+    color: white;
+    right: 0;
+
+    li {
+      padding-right: 1em;
+    }
+  }
+}

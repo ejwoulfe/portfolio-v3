@@ -6,6 +6,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid $red-pink;
+  padding: 0.5em 0 0.5em 0;
 }
 .logo-and-links {
   flex-basis: 50%;
@@ -16,22 +17,28 @@ nav {
   align-items: center;
 
   .logo {
-    font-family: $staatliches;
-    font-size: 1.75rem;
-    letter-spacing: 1.5px;
-    text-decoration: none;
     border-right: 3px solid $red-pink;
     color: white;
     padding: 0 0.5em 0 0.5em;
 
-    &:hover {
-      cursor: pointer;
-      color: $red-pink;
+    button {
+      margin: 0;
+      border: none;
+      background: none;
+      color: white;
+      font-family: $staatliches;
+      font-size: 1.75rem;
+      letter-spacing: 1.5px;
+      &:hover {
+        cursor: pointer;
+        color: $red-pink;
+      }
     }
   }
-
-  span {
-    margin: 0 0.5em 0 0.5rem;
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5em 0 0.5em;
 
     &:hover {
       cursor: pointer;
@@ -56,15 +63,21 @@ nav {
   flex-flow: row nowrap;
   justify-content: flex-end;
   list-style-type: none;
-  font-family: $staatliches;
 
   li {
     margin-right: 1em;
-    font-size: 2rem;
 
-    &:hover {
-      color: $red-pink;
-      cursor: pointer;
+    button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      font-family: $staatliches;
+
+      &:hover {
+        color: $red-pink;
+        cursor: pointer;
+      }
     }
   }
 }
