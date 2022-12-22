@@ -24,6 +24,7 @@ export default function Navigation() {
   useEffect(() => {
     setWindowWith(window.innerWidth);
   }, [windowWidth]);
+
   return (
     <nav>
       <div className="logo-and-links">
@@ -32,9 +33,11 @@ export default function Navigation() {
         </span>
         <a href={resumePDF} target="_blank" rel="noreferrer">
           <img src={resume} alt="resume pdf" />
+          Resume
         </a>
         <a href="https://github.com/ejwoulfe" target="_blank" rel="noreferrer">
           <img src={github} alt="link to personal github" />
+          GitHub
         </a>
       </div>
       {windowWidth < 750 ? (

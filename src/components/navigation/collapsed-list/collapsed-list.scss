@@ -7,11 +7,14 @@
     border: none;
 
     img {
-      height: 3em;
-      width: 3em;
+      height: 2em;
+      width: 2em;
+      padding: 1em;
+      border-radius: 42%;
 
       &:hover {
         cursor: pointer;
+        background-color: rgba(83, 83, 83, 0.397);
       }
     }
   }
@@ -24,6 +27,7 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    overflow: hidden;
 
     li {
       padding: 0.5em 0 0.5em 0;
@@ -33,12 +37,15 @@
       justify-content: space-between;
       border-bottom: 2px solid white;
       width: 100%;
+      animation-duration: 1s;
+      animation-name: slidein;
 
       button {
         padding-right: 1.5em;
         font-size: 1.2rem;
         font-family: $staatliches;
         color: white;
+
         &:hover {
           cursor: pointer;
           color: $red-pink;
@@ -50,5 +57,16 @@
         width: 2em;
       }
     }
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }

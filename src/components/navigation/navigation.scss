@@ -39,21 +39,23 @@ nav {
     color: white;
     text-decoration: none;
     margin: 0 0.5em 0 0.5em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 0.75rem;
+    font-family: $staatliches;
 
     &:hover {
       cursor: pointer;
       color: $red-pink;
+      filter: brightness(0) saturate(100%) invert(29%) sepia(99%) saturate(1320%) hue-rotate(324deg) brightness(87%)
+        contrast(92%);
     }
   }
 
   img {
     height: 34px;
     width: 34px;
-
-    &:hover {
-      filter: brightness(0) saturate(100%) invert(29%) sepia(99%) saturate(1320%) hue-rotate(324deg) brightness(87%)
-        contrast(92%);
-    }
   }
 }
 .nav-list {
