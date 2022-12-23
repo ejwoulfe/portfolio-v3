@@ -1,37 +1,57 @@
 @import "../../util/variables";
 
 .banner {
-  width: 100%;
   position: relative;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  max-width: 1920px;
+  margin: auto;
 
-  div {
-    position: relative;
+  .background {
     width: 100%;
+    position: relative;
+    height: 800px;
     display: flex;
-    padding: 0.2em 0;
-    white-space: normal;
-    font-size: 3rem;
-    transform: rotate(-20deg);
-    top: -100%;
-    left: -12%;
+    flex-direction: column;
+    overflow: hidden;
 
-    img {
-      height: 2em;
-      width: 2em;
-      transition: 0.1s;
-      padding: 0 5px;
-      user-select: none;
-      cursor: default;
-      filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(1835%) hue-rotate(187deg) brightness(112%)
-        contrast(88%);
+    div {
+      position: relative;
+      width: 100%;
+      display: flex;
+      padding: 0.2em 1em;
+      white-space: normal;
+      font-size: 3rem;
+      transform: rotate(-20deg);
+      top: -65%;
+      left: -10%;
 
-      &:hover {
-        filter: $svg-red-pink drop-shadow(0px 0px 40px $red-pink);
+      img {
+        height: 2em;
+        width: 2em;
+        transition: 0.1s;
+        padding: 0 5px;
+        user-select: none;
+        cursor: default;
+        filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(1835%) hue-rotate(187deg) brightness(112%)
+          contrast(88%);
+
+        &:hover {
+          filter: $svg-red-pink drop-shadow(0px 0px 40px $red-pink);
+        }
       }
+    }
+  }
+  .name-and-role {
+    position: absolute;
+
+    top: 30%;
+    left: 42%;
+
+    h1,
+    h2 {
+      color: white;
+      font-family: $roboto;
+      font-size: 3rem;
+      margin: 0;
     }
   }
 }
