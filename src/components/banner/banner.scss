@@ -1,0 +1,70 @@
+@import "../../util/variables";
+
+.banner {
+  width: 100%;
+  position: relative;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 0.2em 0;
+    white-space: normal;
+    font-size: 3rem;
+    transform: rotate(-20deg);
+    top: -100%;
+    left: -12%;
+
+    img {
+      height: 2em;
+      width: 2em;
+      transition: 0.1s;
+      padding: 0 5px;
+      user-select: none;
+      cursor: default;
+      filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(1835%) hue-rotate(187deg) brightness(112%)
+        contrast(88%);
+
+      &:hover {
+        filter: $svg-red-pink drop-shadow(0px 0px 40px $red-pink);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

@@ -1,5 +1,4 @@
 import Navigation from "../navigation";
-import CollapsedList from "../collapsed-list/collapsed-list";
 import { render, screen } from "@testing-library/react";
 
 describe("The navigation component", () => {
