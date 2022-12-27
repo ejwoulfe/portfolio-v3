@@ -11,10 +11,10 @@ import dumbbell from "../../assets/icons/svg/dumbbell.svg";
 import gamepad from "../../assets/icons/svg/gamepad.svg";
 import mountain from "../../assets/icons/svg/mountain.svg";
 import mouse from "../../assets/icons/svg/mouse.svg";
-import gitHub from "../../assets/icons/svg/github-white.svg";
+import gitHub from "../../assets/icons/svg/github.svg";
 import hiking from "../../assets/icons/svg/person-hiking.svg";
 import react from "../../assets/icons/svg/react.svg";
-import javaScript from "../../assets/icons/svg/square-js.svg";
+import javaScript from "../../assets/icons/svg/javascript.svg";
 import tree from "../../assets/icons/svg/tree.svg";
 import twitch from "../../assets/icons/svg/twitch.svg";
 import tent from "../../assets/icons/svg/tent.svg";
@@ -64,7 +64,7 @@ export default function Banner() {
     <img src={database} alt="database icon" aria-hidden="true" />,
     <img src={robot} alt="robot icon" aria-hidden="true" />,
     <img src={keyboard} alt="keyboard icon" aria-hidden="true" />,
-    <img src={terminal} alt="v icon" aria-hidden="true" />,
+    <img src={terminal} alt="terminal icon" aria-hidden="true" />,
   ];
 
   // Function to randomize the order of the icons array so the background will appear to be a random order of icons instead of the same from line to line

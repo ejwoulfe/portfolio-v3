@@ -1,5 +1,5 @@
 import resume from "../../assets/icons/svg/resume.svg";
-import github from "../../assets/icons/svg/github-white.svg";
+import github from "../../assets/icons/svg/github.svg";
 import resumePDF from "../../assets/resume/Edmond_Woulfe_Resume.pdf";
 import { listItems } from "./list-items";
 import "./navigation.scss";

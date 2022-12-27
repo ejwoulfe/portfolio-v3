@@ -1,0 +1,67 @@
+@import "../../util/variables";
+
+.skills {
+  color: white;
+
+  .skills-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 3rem;
+    font-family: $staatliches;
+    letter-spacing: 2px;
+    padding-top: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    // text-decoration: underline;
+    // text-decoration-color: $red-pink;
+    text-align: left;
+  }
+
+  .skill-icons {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding-bottom: 2em;
+    padding-left: 0;
+
+    li {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 0.5em 1em;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      margin-right: 1em;
+      animation: fadeInRight 1s;
+      font-family: $staatliches;
+      letter-spacing: 1px;
+
+      &:nth-child(1) {
+        padding-left: 0;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.25);
+          filter: $svg-red-pink drop-shadow(0px 0px 40px $red-pink);
+        }
+      }
+      img {
+        height: 2em;
+        width: 2em;
+        filter: $svg-white;
+        transition: 0.2s;
+        margin-bottom: 0.4em;
+      }
+      span {
+        text-decoration: overline;
+        text-decoration-color: $red-pink;
+        text-decoration-thickness: 2px;
+      }
+    }
+  }
+}
