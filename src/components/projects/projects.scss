@@ -1,0 +1,12 @@
+@import "../../util/variables";
+.projects {
+  color: white;
+}
+
+.project-links {
+  img {
+    height: 2em;
+    width: 2em;
+    filter: $svg-white;
+  }
+}

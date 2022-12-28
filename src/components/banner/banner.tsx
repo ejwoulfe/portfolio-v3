@@ -31,6 +31,7 @@ import database from "../../assets/icons/svg/database.svg";
 import robot from "../../assets/icons/svg/robot.svg";
 import keyboard from "../../assets/icons/svg/keyboard.svg";
 import terminal from "../../assets/icons/svg/terminal.svg";
+import typescript from "../../assets/icons/svg/typescript.svg";
 
 export default function Banner() {
   const icons = [
@@ -65,6 +66,7 @@ export default function Banner() {
     <img src={robot} alt="robot icon" aria-hidden="true" />,
     <img src={keyboard} alt="keyboard icon" aria-hidden="true" />,
     <img src={terminal} alt="terminal icon" aria-hidden="true" />,
+    <img src={typescript} alt="typescript icon" aria-hidden="true" />,
   ];
 
   // Function to randomize the order of the icons array so the background will appear to be a random order of icons instead of the same from line to line
