@@ -28,6 +28,8 @@ export default function SimpleSlider() {
     beforeChange: setNewIndex,
     centerMode: true,
     centerPadding: "0px",
+    focusOnSelect: true,
+    swipe: false,
   };
 
   function setNewIndex(oldIndex: number, newIndex: number) {
@@ -44,18 +46,22 @@ export default function SimpleSlider() {
     });
   }
 
-  function createProjectContainer(currentProject: Project) {
+  function createProjectLinks(currentProject: Project) {
     return (
-      <div>
-        <h3>{currentProject.name}</h3>
-        <ul className="project-links">
-          <li
-            onClick={() => {
-              window.open("https://www.youtube.com/watch?v=" + currentProject.videoURL);
-            }}>
-            <img src={youtube} alt="youtube icon" />
-            <span>Demo</span>
+      <ul className="project-links">
+        <li
+          onClick={() => {
+            window.open("https://www.youtube.com/watch?v=" + currentProject.videoURL);
+          }}>
+          <img src={youtube} alt="youtube icon" />
+          <span>Demo</span>
+        </li>
+        {currentProject.liveURL === "none" ? (
+          <li>
+            <img className="website-not-live" src={desktop} alt="website not live icon" />
+            <span>Not Live</span>
           </li>
+        ) : (
           <li
             onClick={() => {
               window.open(currentProject.liveURL);
@@ -63,25 +69,26 @@ export default function SimpleSlider() {
             <img src={desktop} alt="website icon" />
             <span>Website</span>
           </li>
+        )}
 
-          <li
-            onClick={() => {
-              window.open(currentProject.githubURL);
-            }}>
-            <img src={github} alt="github icon" />
-            <span>GitHub</span>
-          </li>
-        </ul>
-      </div>
+        <li
+          onClick={() => {
+            window.open(currentProject.githubURL);
+          }}>
+          <img src={github} alt="github icon" />
+          <span>GitHub</span>
+        </li>
+      </ul>
     );
   }
 
   return (
     <div className="project-info">
-      <div>{createProjectContainer(projectsArr[currentProjectIndex])}</div>
+      <h3>{projectsArr[currentProjectIndex].name}</h3>
+      {createProjectLinks(projectsArr[currentProjectIndex])}
       <Slider {...settings}>{createSliderImages(projectsArr)}</Slider>
       <ul className="tech-stack-list">{createListIcons(projectsArr[currentProjectIndex].techStack)}</ul>
-      <div>{projectsArr[currentProjectIndex].description}</div>
+      <div className="project-description">{projectsArr[currentProjectIndex].description}</div>
     </div>
   );
 }

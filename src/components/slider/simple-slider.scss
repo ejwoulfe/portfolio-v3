@@ -3,7 +3,7 @@
   color: white;
   width: 100%;
 
-  button {
+  .slick-arrow {
     position: absolute;
     z-index: 999;
     top: 44% !important;
@@ -11,23 +11,43 @@
     height: 5em !important;
   }
   .slick-prev {
-    left: 30% !important;
+    left: 25% !important;
+    top: -40% !important;
+
+    &::before {
+      font-size: 3rem !important;
+    }
   }
   .slick-next {
-    right: 30% !important;
+    right: 25% !important;
+    top: -40% !important;
+    &::before {
+      font-size: 3rem !important;
+    }
   }
 
   img {
     height: 100%;
     width: 95%;
     margin: 0 auto;
+    &:hover {
+      border-bottom: 2px solid $red-pink;
+    }
   }
 
   .slick-slide {
     opacity: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
   .slick-center {
     opacity: 100%;
+
+    &:hover {
+      cursor: default;
+    }
 
     margin-bottom: 3em;
     img {
@@ -43,7 +63,6 @@
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
     padding: 0;
     width: 50%;
     margin: 0 auto;
@@ -55,16 +74,65 @@
   }
 
   h3 {
-    font-size: 1.5rem;
-    font-family: $audio-wide;
+    font-size: 1.8rem;
+    font-family: roboto;
+  }
+  .project-links {
+    padding-bottom: 2em;
+    justify-content: center;
+
+    li {
+      padding: 0 1em;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+
+      img {
+        flex-basis: 60%;
+        height: 32px;
+        width: 32px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .website-not-live {
+        flex-basis: 60%;
+        opacity: 50%;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+
+      span {
+        flex-basis: 40%;
+        font-size: 1rem;
+        font-family: roboto;
+        padding-top: 0.5em;
+      }
+    }
   }
   .tech-stack-list {
+    padding-bottom: 3em;
+    justify-content: space-evenly;
+
     li {
+      font-family: roboto;
+      text-transform: capitalize;
       img {
         height: 2em;
         width: 2em;
         filter: $svg-white;
       }
     }
+  }
+  .project-description {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    font-family: roboto;
+    font-size: 1rem;
   }
 }

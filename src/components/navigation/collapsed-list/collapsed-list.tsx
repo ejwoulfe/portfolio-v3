@@ -2,7 +2,7 @@ import "./collapsed-list.scss";
 import { listItems } from "../list-items";
 import { useState } from "react";
 import bars from "../../../assets/icons/svg/bars.svg";
-import xMark from "../../../assets/icons/svg/xmark-solid.svg";
+import xMark from "../../../assets/icons/svg/xmark.svg";
 
 export default function CollapsedList() {
   const [expanded, setExpanded] = useState<Boolean>(false);

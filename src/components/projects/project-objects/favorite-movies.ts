@@ -6,7 +6,7 @@ export const favoriteMoviesProject: Project = new PersonalProject(
   "Favorite Movies",
   projectImage,
   ["html5", "css3", "javascript", "react", "sass", "node", "mongodb"],
-  "WIP",
+  "none",
   "https://github.com/ejwoulfe/favorite-movies",
   "75jnHmUn5_0",
   [
