@@ -2,28 +2,11 @@ import PersonalProject from "../../../models/project";
 import { Project } from "../../../interfaces/project";
 
 import projectImage from "../../../assets/projects/bdoprofit.png";
-import html5 from "../../../assets/icons/svg/html5.svg";
-import css3 from "../../../assets/icons/svg/css3.svg";
-import javascript from "../../../assets/icons/svg/javascript.svg";
-import bootstrap from "../../../assets/icons/svg/bootstrap.svg";
-import jquery from "../../../assets/icons/svg/jquery.svg";
-import php from "../../../assets/icons/svg/php.svg";
-import mysql from "../../../assets/icons/svg/mysql.svg";
-import node from "../../../assets/icons/svg/node.svg";
 
 export const bdoProfitProject: Project = new PersonalProject(
   "BDOProfit",
   projectImage,
-  {
-    HTML5: html5,
-    CSS3: css3,
-    JavaScript: javascript,
-    Bootstrap: bootstrap,
-    jQuery: jquery,
-    PHP: php,
-    MySQL: mysql,
-    Node: node,
-  },
+  ["html5", "css3", "javascript", "bootstrap", "jquery", "php", "mysql", "node"],
   "https://bdoprofit.com",
   "https://github.com/ejwoulfe/BDOProfit",
   "pJPPptodu5g",

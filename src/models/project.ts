@@ -1,9 +1,7 @@
-import { techStack } from "../interfaces/project";
-
 export default class PersonalProject {
   name: string;
   image: string;
-  techStack: techStack;
+  techStack: Array<string>;
   liveURL: string;
   githubURL: string;
   videoURL: string;
@@ -12,7 +10,7 @@ export default class PersonalProject {
   constructor(
     name: string,
     image: string,
-    techStack: techStack,
+    techStack: Array<string>,
     liveURL: string,
     githubURL: string,
     videoURL: string,

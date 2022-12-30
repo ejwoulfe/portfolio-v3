@@ -1,6 +1,12 @@
 @import "../../util/variables";
+@import "../../util/mixins";
 .projects {
   color: white;
+  background-color: rgb(27, 27, 27);
+
+  h2 {
+    @include section-header-style;
+  }
 }
 
 .project-links {

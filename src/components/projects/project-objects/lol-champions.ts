@@ -2,24 +2,11 @@ import PersonalProject from "../../../models/project";
 import { Project } from "../../../interfaces/project";
 
 import projectImage from "../../../assets/projects/lol-champions.png";
-import html5 from "../../../assets/icons/svg/html5.svg";
-import css3 from "../../../assets/icons/svg/css3.svg";
-import javascript from "../../../assets/icons/svg/javascript.svg";
-import react from "../../../assets/icons/svg/react.svg";
-import sass from "../../../assets/icons/svg/sass.svg";
-import bootstrap from "../../../assets/icons/svg/bootstrap.svg";
 
 export const lolChampionsProject: Project = new PersonalProject(
   "LoL Champions",
   projectImage,
-  {
-    HTML5: html5,
-    CSS3: css3,
-    JavaScript: javascript,
-    React: react,
-    Sass: sass,
-    Bootstrap: bootstrap,
-  },
+  ["html5", "css3", "javascript", "react", "sass", "bootstrap"],
   "https://lol-champions.netlify.app/",
   "https://github.com/ejwoulfe/lol-champions",
   "bQQMlrC5dS8",

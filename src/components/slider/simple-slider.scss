@@ -1,12 +1,70 @@
+@import "../../util/variables";
 .slick-slider {
   color: white;
+  width: 100%;
+
+  button {
+    position: absolute;
+    z-index: 999;
+    top: 44% !important;
+    width: 5em !important;
+    height: 5em !important;
+  }
+  .slick-prev {
+    left: 30% !important;
+  }
+  .slick-next {
+    right: 30% !important;
+  }
 
   img {
-    height: 10em;
-    width: 10em;
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .slick-slide {
+    opacity: 50%;
+  }
+  .slick-center {
+    opacity: 100%;
+
+    margin-bottom: 3em;
+    img {
+      border: 3px solid $red-pink;
+    }
   }
 }
 .project-info {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+    li {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-family: $audio-wide;
+  }
+  .tech-stack-list {
+    li {
+      img {
+        height: 2em;
+        width: 2em;
+        filter: $svg-white;
+      }
+    }
+  }
 }

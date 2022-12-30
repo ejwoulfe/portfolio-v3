@@ -9,6 +9,7 @@ import { lolChampionsProject } from "../projects/project-objects/lol-champions";
 import youtube from "../../assets/icons/svg/youtube.svg";
 import desktop from "../../assets/icons/svg/desktop.svg";
 import github from "../../assets/icons/svg/github.svg";
+import createListIcons from "../../helper/create-list-icons";
 
 import { Project } from "../../interfaces/project";
 import { useState } from "react";
@@ -21,10 +22,12 @@ export default function SimpleSlider() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: currentProjectIndex,
     beforeChange: setNewIndex,
+    centerMode: true,
+    centerPadding: "0px",
   };
 
   function setNewIndex(oldIndex: number, newIndex: number) {
@@ -77,6 +80,7 @@ export default function SimpleSlider() {
     <div className="project-info">
       <div>{createProjectContainer(projectsArr[currentProjectIndex])}</div>
       <Slider {...settings}>{createSliderImages(projectsArr)}</Slider>
+      <ul className="tech-stack-list">{createListIcons(projectsArr[currentProjectIndex].techStack)}</ul>
       <div>{projectsArr[currentProjectIndex].description}</div>
     </div>
   );
