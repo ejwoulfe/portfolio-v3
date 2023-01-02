@@ -15,7 +15,9 @@ export default function Navigation() {
     <nav>
       <div className="logo-and-links">
         <span className="logo">
-          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>EJW4</button>
+          <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            EJW4
+          </button>
         </span>
         <a href={resumePDF} target="_blank" rel="noreferrer">
           <img src={resume} alt="resume pdf" />
