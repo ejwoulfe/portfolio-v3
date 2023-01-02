@@ -12,6 +12,7 @@ export default function CollapsedList() {
     <div className="expanded-container">
       {expanded ? (
         <button
+          type="button"
           onClick={() => {
             setExpanded((prevValue) => !prevValue);
           }}>
@@ -19,6 +20,7 @@ export default function CollapsedList() {
         </button>
       ) : (
         <button
+          type="button"
           onClick={() => {
             setExpanded((prevValue) => !prevValue);
           }}>
@@ -35,7 +37,7 @@ export default function CollapsedList() {
                 onClick={(e) => {
                   scrollIntoView(item.className);
                 }}>
-                <button>{item.name}</button>
+                <button type="button">{item.name}</button>
                 <img src={require("../../../assets/icons/svg/" + item.icon + ".svg")} alt={item.name + "icon"} />{" "}
               </li>
             );

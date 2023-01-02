@@ -37,7 +37,7 @@ export default function Navigation() {
                 onClick={() => {
                   scrollIntoView(item.className);
                 }}>
-                <button onClick={() => {}}>{item.name}</button>
+                <button type="button">{item.name}</button>
               </li>
             );
           })}
