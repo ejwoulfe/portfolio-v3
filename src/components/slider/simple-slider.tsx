@@ -30,6 +30,8 @@ export default function SimpleSlider() {
     centerPadding: "0px",
     focusOnSelect: true,
     swipe: false,
+    useCSS: true,
+    useTransform: true,
   };
 
   function setNewIndex(oldIndex: number, newIndex: number) {
@@ -40,7 +42,7 @@ export default function SimpleSlider() {
     return projects.map((project, index) => {
       return (
         <div key={"project-image-" + index}>
-          <img src={project.image} alt="project" />
+          <img src={project.image} alt={project.name + " project"} />
         </div>
       );
     });
@@ -87,8 +89,12 @@ export default function SimpleSlider() {
       <h3>{projectsArr[currentProjectIndex].name}</h3>
       {createProjectLinks(projectsArr[currentProjectIndex])}
       <Slider {...settings}>{createSliderImages(projectsArr)}</Slider>
-      <ul className="tech-stack-list">{createListIcons(projectsArr[currentProjectIndex].techStack)}</ul>
-      <div className="project-description">{projectsArr[currentProjectIndex].description}</div>
+      <ul className="tech-stack-list" data-testid="test-tech-stack-list">
+        {createListIcons(projectsArr[currentProjectIndex].techStack)}
+      </ul>
+      <div className="project-description">
+        <span>{projectsArr[currentProjectIndex].description}</span>
+      </div>
     </div>
   );
 }

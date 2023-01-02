@@ -17,3 +17,13 @@
     transform: translateY(-1rem);
   }
 }
+
+@mixin icon-hover-style {
+  margin-bottom: 0.1em;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.25);
+    filter: $svg-red-pink;
+  }
+}

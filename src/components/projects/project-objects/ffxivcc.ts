@@ -6,7 +6,6 @@ import projectImage from "../../../assets/projects/ffxivcc.png";
 export const ffxivccProject: Project = new PersonalProject(
   "FFXIV Crafting Calculator",
   projectImage,
-
   ["html5", "css3", "javascript", "react", "sass", "node", "mysql", "typescript", "redux"],
   "none",
   "https://github.com/ejwoulfe/FFXIV-crafting-calculator",
