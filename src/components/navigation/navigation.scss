@@ -7,6 +7,9 @@ nav {
   align-items: center;
   border-bottom: 3px solid $red-pink;
   padding: 0.5em 0 0.5em 0;
+  position: fixed;
+  z-index: 998;
+  width: 100%;
 }
 .logo-and-links {
   flex-basis: 50%;

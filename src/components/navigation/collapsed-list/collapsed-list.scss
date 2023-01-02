@@ -40,17 +40,24 @@
       width: 100%;
       animation-duration: 1s;
       animation-name: slidein;
+      background-color: black;
+
+      &:hover {
+        cursor: pointer;
+        img {
+          filter: $svg-red-pink;
+        }
+        button {
+          cursor: pointer;
+          color: $red-pink;
+        }
+      }
 
       button {
         padding-right: 1.5em;
         font-size: 1.2rem;
         font-family: $staatliches;
         color: white;
-
-        &:hover {
-          cursor: pointer;
-          color: $red-pink;
-        }
       }
 
       img {

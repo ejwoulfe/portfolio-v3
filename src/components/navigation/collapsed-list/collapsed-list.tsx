@@ -3,6 +3,7 @@ import { listItems } from "../list-items";
 import { useState } from "react";
 import bars from "../../../assets/icons/svg/bars.svg";
 import xMark from "../../../assets/icons/svg/xmark.svg";
+import { scrollIntoView } from "../../../helper/scroll-into-view";
 
 export default function CollapsedList() {
   const [expanded, setExpanded] = useState<Boolean>(false);
@@ -29,7 +30,11 @@ export default function CollapsedList() {
         <ul data-testid="page-nav-list">
           {listItems.map((item, index) => {
             return (
-              <li key={"list-item-" + index}>
+              <li
+                key={"list-item-" + index}
+                onClick={(e) => {
+                  scrollIntoView(item.className);
+                }}>
                 <button>{item.name}</button>
                 <img src={require("../../../assets/icons/svg/" + item.icon + ".svg")} alt={item.name + "icon"} />{" "}
               </li>

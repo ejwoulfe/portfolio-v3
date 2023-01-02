@@ -6,6 +6,7 @@ import "./navigation.scss";
 import CollapsedList from "./collapsed-list/collapsed-list";
 import useWindowWidth from "../../hooks/windowResize";
 import Width from "../../interfaces/width";
+import { scrollIntoView } from "../../helper/scroll-into-view";
 
 export default function Navigation() {
   const windowWidth: Width = useWindowWidth();
@@ -31,7 +32,11 @@ export default function Navigation() {
         <div className="nav-list">
           {listItems.map((item, index) => {
             return (
-              <li key={"list-item-" + index}>
+              <li
+                key={"list-item-" + index}
+                onClick={() => {
+                  scrollIntoView(item.className);
+                }}>
                 <button onClick={() => {}}>{item.name}</button>
               </li>
             );
