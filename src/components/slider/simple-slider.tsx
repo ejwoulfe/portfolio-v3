@@ -2,20 +2,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./simple-slider.scss";
-import { bdoProfitProject } from "../projects/project-objects/bdoprofit";
-import { favoriteMoviesProject } from "../projects/project-objects/favorite-movies";
-import { ffxivccProject } from "../projects/project-objects/ffxivcc";
-import { lolChampionsProject } from "../projects/project-objects/lol-champions";
 import youtube from "../../assets/icons/svg/youtube.svg";
 import desktop from "../../assets/icons/svg/desktop.svg";
 import github from "../../assets/icons/svg/github.svg";
 import createListIcons from "../../helper/create-list-icons";
+import projectsArr from "../projects/project-objects/projects-array";
 
 import { Project } from "../../interfaces/project";
 import { useState } from "react";
 
 export default function SimpleSlider() {
-  const projectsArr = [ffxivccProject, lolChampionsProject, bdoProfitProject, favoriteMoviesProject];
   const [currentProjectIndex, setCurrentProjectIndex] = useState<number>(0);
 
   let settings = {
@@ -50,7 +46,7 @@ export default function SimpleSlider() {
 
   function createProjectLinks(currentProject: Project) {
     return (
-      <ul className="project-links">
+      <ul className="project-links" data-testid="test-project-links">
         <li
           onClick={() => {
             window.open("https://www.youtube.com/watch?v=" + currentProject.videoURL);
