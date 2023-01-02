@@ -10,9 +10,12 @@ import projectsArr from "../projects/project-objects/projects-array";
 
 import { Project } from "../../interfaces/project";
 import { useState } from "react";
+import useWindowWidth from "../../hooks/windowResize";
+import Width from "../../interfaces/width";
 
 export default function SimpleSlider() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState<number>(0);
+  const windowWidth: Width = useWindowWidth();
 
   let settings = {
     dots: false,
@@ -28,6 +31,11 @@ export default function SimpleSlider() {
     swipe: false,
     useCSS: true,
     useTransform: true,
+  };
+
+  let smallerScreenSettings = {
+    ...settings,
+    slidesToShow: 1,
   };
 
   function setNewIndex(oldIndex: number, newIndex: number) {
@@ -80,16 +88,24 @@ export default function SimpleSlider() {
     );
   }
 
+  //   function createSizedSlider(windowWidth: Width){
+  // if(windowWidth<= )
+  //   }
+
   return (
     <div className="project-info">
       <h3>{projectsArr[currentProjectIndex].name}</h3>
       {createProjectLinks(projectsArr[currentProjectIndex])}
-      <Slider {...settings}>{createSliderImages(projectsArr)}</Slider>
+      {windowWidth.width < 900 ? (
+        <Slider {...smallerScreenSettings}>{createSliderImages(projectsArr)}</Slider>
+      ) : (
+        <Slider {...settings}>{createSliderImages(projectsArr)}</Slider>
+      )}
       <ul className="tech-stack-list" data-testid="test-tech-stack-list">
         {createListIcons(projectsArr[currentProjectIndex].techStack)}
       </ul>
       <div className="project-description">
-        <span>{projectsArr[currentProjectIndex].description}</span>
+        <p>{projectsArr[currentProjectIndex].description}</p>
       </div>
     </div>
   );

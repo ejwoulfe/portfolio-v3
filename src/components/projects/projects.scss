@@ -3,6 +3,7 @@
 .projects {
   color: white;
   background-color: rgb(27, 27, 27);
+  padding-bottom: 3rem;
 
   h2 {
     @include section-header-style;

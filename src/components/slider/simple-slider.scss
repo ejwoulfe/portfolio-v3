@@ -13,17 +13,14 @@
   .slick-arrow {
     position: absolute;
     z-index: 999;
-    top: 44% !important;
-    width: 5em !important;
-    height: 5em !important;
   }
 
   .slick-prev {
-    left: 25% !important;
+    left: 23% !important;
     top: -40% !important;
 
     &::before {
-      font-size: 3rem !important;
+      font-size: clamp(3vw, 2.5rem, 3rem);
     }
   }
   .slick-next {
@@ -31,7 +28,7 @@
     top: -40% !important;
 
     &::before {
-      font-size: 3rem !important;
+      font-size: clamp(3vw, 2.5rem, 3rem);
     }
   }
 
@@ -138,11 +135,12 @@
   }
   .tech-stack-list {
     padding-bottom: 3em;
-    justify-content: space-evenly;
+    justify-content: center;
 
     li {
       font-family: $staatliches;
       letter-spacing: 1px;
+      padding: 0 0.4em;
 
       img {
         height: 2em;
@@ -160,11 +158,55 @@
     }
   }
   .project-description {
+    border-left: 2px solid $red-pink;
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 2em;
     font-family: roboto;
     font-size: 1rem;
     text-align: left;
+
+    p {
+      padding-left: 2em;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .project-info ul {
+    width: 80%;
+  }
+  .slick-slider .slick-prev {
+    top: -20% !important;
+    left: 13% !important;
+  }
+  .slick-slider .slick-next {
+    top: -20% !important;
+    right: 15% !important;
+  }
+}
+@media (max-width: 700px) {
+  .slick-slider .slick-prev {
+    top: -20% !important;
+    left: 3% !important;
+  }
+  .slick-slider .slick-next {
+    top: -20% !important;
+    right: 8% !important;
+  }
+  .project-info .project-description {
+    width: 100%;
+    p {
+      padding-left: 1em;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .slick-slider .slick-prev {
+    top: -20% !important;
+    left: -4% !important;
+  }
+  .slick-slider .slick-next {
+    top: -20% !important;
+    right: 2% !important;
   }
 }

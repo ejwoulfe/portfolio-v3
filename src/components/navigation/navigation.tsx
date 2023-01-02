@@ -3,27 +3,12 @@ import github from "../../assets/icons/svg/github.svg";
 import resumePDF from "../../assets/resume/Edmond_Woulfe_Resume.pdf";
 import { listItems } from "./list-items";
 import "./navigation.scss";
-import { useEffect, useState } from "react";
 import CollapsedList from "./collapsed-list/collapsed-list";
+import useWindowWidth from "../../hooks/windowResize";
+import Width from "../../interfaces/width";
 
 export default function Navigation() {
-  const [windowWidth, setWindowWith] = useState<number>(window.innerWidth);
-
-  let handleResize = () => {
-    setWindowWith(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    setWindowWith(window.innerWidth);
-  }, [windowWidth]);
+  const windowWidth: Width = useWindowWidth();
 
   return (
     <nav>
@@ -40,7 +25,7 @@ export default function Navigation() {
           GitHub
         </a>
       </div>
-      {windowWidth < 750 ? (
+      {windowWidth.width < 750 ? (
         <CollapsedList></CollapsedList>
       ) : (
         <div className="nav-list">
