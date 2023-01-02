@@ -59,21 +59,27 @@ export default function SimpleSlider() {
           onClick={() => {
             window.open("https://www.youtube.com/watch?v=" + currentProject.videoURL);
           }}>
-          <img src={youtube} alt="youtube icon" />
-          <span>Demo</span>
+          <button>
+            <img src={youtube} alt="youtube icon" />
+            <span>Demo</span>
+          </button>
         </li>
         {currentProject.liveURL === "none" ? (
           <li>
-            <img className="website-not-live" src={desktop} alt="website not live icon" />
-            <span>Not Live</span>
+            <button disabled>
+              <img className="website-not-live" src={desktop} alt="website not live icon" />
+              <span>Not Live</span>
+            </button>
           </li>
         ) : (
           <li
             onClick={() => {
               window.open(currentProject.liveURL);
             }}>
-            <img src={desktop} alt="website icon" />
-            <span>Website</span>
+            <button>
+              <img src={desktop} alt="website icon" />
+              <span>Website</span>
+            </button>
           </li>
         )}
 
@@ -81,8 +87,10 @@ export default function SimpleSlider() {
           onClick={() => {
             window.open(currentProject.githubURL);
           }}>
-          <img src={github} alt="github icon" />
-          <span>GitHub</span>
+          <button>
+            <img src={github} alt="github icon" />
+            <span>GitHub</span>
+          </button>
         </li>
       </ul>
     );

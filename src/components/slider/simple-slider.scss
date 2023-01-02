@@ -20,7 +20,7 @@
     top: -40% !important;
 
     &::before {
-      font-size: clamp(3vw, 2.5rem, 3rem);
+      font-size: clamp(1.5vw, 3rem, 5rem);
     }
   }
   .slick-next {
@@ -28,7 +28,7 @@
     top: -40% !important;
 
     &::before {
-      font-size: clamp(3vw, 2.5rem, 3rem);
+      font-size: clamp(1.5vw, 3rem, 5rem);
     }
   }
 
@@ -94,11 +94,17 @@
 
     li {
       padding: 0 1em;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      justify-content: flex-end;
       position: relative;
+
+      button {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        background: none;
+        border: none;
+        color: white;
+      }
 
       img {
         flex-basis: 60%;
