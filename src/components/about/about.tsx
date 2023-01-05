@@ -22,10 +22,7 @@ export default function About() {
             developer skills and knowledge. I find the best way to learn new material is to build something with them!
             I'm excited to work with a talented team to create and maintain amazing websites.
           </p>
-          <p>
-            If you'd like to contact me, please fill out the contact form below or send me a message to my email listed
-            on my resume.
-          </p>
+          <p>If you'd like to contact me send me a message to my email listed on my resume.</p>
           <p>Thanks!</p>
         </div>
       </div>
