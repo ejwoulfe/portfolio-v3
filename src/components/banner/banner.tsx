@@ -91,7 +91,7 @@ export default function Banner() {
   return (
     <section role="banner" className="banner">
       <div className="background">
-        {[...Array(20)].map(() => (
+        {[...Array(20)].map((value, index) => (
           <div>
             <div className="animation-container">{generateRandomOrderOfIcons(icons)}</div>
           </div>

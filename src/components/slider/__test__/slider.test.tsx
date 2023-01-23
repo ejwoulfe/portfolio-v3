@@ -35,7 +35,7 @@ describe("The Simple Slider component", () => {
   it("should load the next project when the next button is clicked", () => {
     render(<SimpleSlider />);
     const secondProject = projectsArr[1];
-    const nextButton = screen.getAllByRole("button")[1];
+    const nextButton = screen.getAllByRole("button")[4];
     expect(nextButton).toHaveTextContent("Next");
     fireEvent.click(nextButton);
     expect(screen.getByText(secondProject.name)).toBeInTheDocument();
@@ -43,7 +43,7 @@ describe("The Simple Slider component", () => {
   it("should load the last project in the array after the previous button is pressed when at the 0th index or initial project", () => {
     render(<SimpleSlider />);
     const lastProject = projectsArr[projectsArr.length - 1];
-    const prevButton = screen.getAllByRole("button")[0];
+    const prevButton = screen.getAllByRole("button")[3];
     expect(prevButton).toHaveTextContent("Prev");
     fireEvent.click(prevButton);
     expect(screen.getByText(lastProject.name)).toBeInTheDocument();

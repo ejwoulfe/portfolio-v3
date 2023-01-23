@@ -31,7 +31,7 @@ export default function Navigation() {
       {windowWidth.width < 750 ? (
         <CollapsedList></CollapsedList>
       ) : (
-        <div className="nav-list">
+        <ul className="nav-list">
           {listItems.map((item, index) => {
             return (
               <li
@@ -43,7 +43,7 @@ export default function Navigation() {
               </li>
             );
           })}
-        </div>
+        </ul>
       )}
     </nav>
   );

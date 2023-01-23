@@ -11,7 +11,7 @@ export default function About() {
         </div>
         <div className="description" data-testid="test-about-description">
           <p>Hello, my name is Edmond Woulfe, but you can call me Ed.</p>
-          <p>I attended the University of Wisconsin - Parkside where I persued a degree in Computer Science.</p>
+          <p>I attended the University of Wisconsin - Parkside where I pursued a degree in Computer Science.</p>
           <p>
             During a web concepts course at university, I learned about web development and how the front-end and
             back-end technologies work together to form the modern web that we have today.
