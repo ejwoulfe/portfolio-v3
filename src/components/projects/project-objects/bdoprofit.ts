@@ -7,7 +7,7 @@ export const bdoProfitProject: Project = new PersonalProject(
   "BDOProfit",
   projectImage,
   ["html5", "css3", "javascript", "bootstrap", "jquery", "php", "mysql", "node"],
-  "https://bdoprofit.com",
+  "none",
   "https://github.com/ejwoulfe/BDOProfit",
   "pJPPptodu5g",
   [
