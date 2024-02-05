@@ -12,9 +12,26 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      as="style"
+      onload="this.onload=null; this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      as="style"
+      onload="this.onload=null; this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      as="style"
+      onload="this.onload=null; this.rel='stylesheet'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" type="text/css" />
+    </noscript>
 
     <title>Ed Woulfe</title>
   </head>
